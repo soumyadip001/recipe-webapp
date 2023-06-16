@@ -4,7 +4,8 @@
       <img :src="props.imgUrl" :alt="props.imgAlt" class="w-full h-full" />
     </div>
     <h4 class="text-2xl font-bold font-n">{{ props.title }}</h4>
-    <p><strong>Ingredients:</strong> {{ props.desc }}</p>
+    <p>{{ props.desc }}</p>
+    <p v-if="props.ingredients"><strong>Ingredients:</strong> {{ props.ingredients }}</p>
   </div>
 </template>
 
@@ -25,6 +26,10 @@ const props = defineProps({
     type: String,
     default: "Food Closeup",
   },
+  ingredients: {
+    type: String,
+    default: null,
+  }
 });
 </script>
 
