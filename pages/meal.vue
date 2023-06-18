@@ -9,16 +9,22 @@
         <p>Please wait till we fetch all the recipe</p>
       </template>
       <div v-if="recipes.length" class="flex w-full items-center flex-wrap gap-8">
-        <div class="flex w-[350px] gap-4 flex-wrap h-[550px]" v-for="recipe in recipes">
+        <div class="flex w-[390px] gap-4 flex-wrap h-[550px]" v-for="recipe in recipes">
           <RecipeCard
             :img-url="recipe.thumbnail_url"
             :img-alt="recipe.name"
+            :img-height="'400'"
             :title="recipe.name"
             :desc="recipe.description"
-            :id="recipe.canonical_id"
+            :id="recipe.id"
+            :details="recipe"
+            :show-button="true"
           />
         </div>
       </div>
+    </div>
+    <div class="flex items-center justify-center w-full my-4">
+      <Button>Load More</Button>
     </div>
   </Section>
 </template>
@@ -28,6 +34,8 @@ definePageMeta({
   layout: "base",
 });
 const pending = ref(true);
+const pageStart = ref(0);
+const pageLimit = ref(20);
 const recipes = ref([]);
 onMounted(async () => {
   await fetchRecipeList();
@@ -35,15 +43,16 @@ onMounted(async () => {
 
 const fetchRecipeList = async () => {
   pending.value = true;
-  const res = await $fetch(`/api/recipes`);
-  if (res && res.results.length) {
+  const res = await $fetch(
+    `/api/recipes-mock?start=${pageStart.value}&limit=${pageLimit.value}`
+  );
+  if (res && res?.results.length) {
     console.log("res", res);
     pending.value = false;
     recipes.value = res.results;
   } else {
+    pending.value = false;
     recipes.value = [];
   }
 };
 </script>
-
-<style lang="scss" scoped></style>

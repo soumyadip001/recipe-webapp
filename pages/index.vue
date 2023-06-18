@@ -30,6 +30,7 @@
     <div class="flex w-full gap-8">
       <div class="w-1/3">
         <RecipeCard
+          :id="4704"
           img-url="https://unsplash.com/photos/yhc4pSbl01A/download?ixid=M3wxMjA3fDB8MXxhbGx8fHx8fHx8fHwxNjg2NzIwNjU1fA&force=true&w=640"
           img-alt="Avocado Salad"
           title="Avocado Salad"
@@ -37,6 +38,7 @@
       </div>
       <div class="w-1/3">
         <RecipeCard
+          :id="4705"
           img-url="https://unsplash.com/photos/IA1J0X-KX3Q/download?force=true&w=640"
           img-alt="Philipino Noodles"
           title="Philipino Noodles"
@@ -44,6 +46,7 @@
       </div>
       <div class="w-1/3">
         <RecipeCard
+          :id="4706"
           img-url="https://unsplash.com/photos/xX9SmqQCbFY/download?ixid=M3wxMjA3fDB8MXxzZWFyY2h8MjZ8fGZvb2QlMjBkaXNofGVufDB8fHx8MTY4NjY2Njc2MXww&force=true&w=640"
           img-alt="Strawberry Salad with Balsamic"
           title="Strawberry Salad with Balsamic"

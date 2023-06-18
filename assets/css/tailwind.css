@@ -18,7 +18,7 @@
 }
 
 .btn-outline {
-  @apply flex items-center justify-center rounded-xl bg-white py-2 px-6 font-bold text-base hover:bg-green-600 h-16 border border-green-600 text-green-600 hover:text-white transition-all;
+  @apply flex items-center justify-center rounded-xl bg-transparent py-2 px-6 font-bold text-base hover:bg-green-600 h-16 border border-green-600 text-green-600 hover:text-white transition-all;
   font-family: 'Nunito', sans-serif;
   word-spacing: .05rem;
   letter-spacing: .05rem;
@@ -34,6 +34,19 @@
 .w-80p { width: 80%; }
 .h-90p { height: 90%; }
 .h-80p { height: 80%; }
+.h-500px { height: 500px; }
+.h-400px { height: 400px; }
 .hover-w-90p:hover { width: 90%; }
 .hover-h-90p:hover { height: 90%; }
 .leading-15 { line-height: 4rem; }
+
+.p-elipsis {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+}
+.p-elipsis-l-1 { -webkit-line-clamp: 1; }
+.p-elipsis-l-2 { -webkit-line-clamp: 2; }
+.p-elipsis-l-3 { -webkit-line-clamp: 3; }
+.p-elipsis-l-4 { -webkit-line-clamp: 4; }
