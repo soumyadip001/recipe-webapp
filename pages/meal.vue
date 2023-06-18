@@ -1,4 +1,5 @@
 <template>
+  <Loader :pending="pending" />
   <Section margin-y="4" :is-col="true" flex-items="items-start" gap="4">
     <div class="flex justify-between items-center w-full mt-4">
       <h2 class="text-3xl font-bold font-n">Meals all over the world</h2>
@@ -22,6 +23,11 @@
           />
         </div>
       </div>
+      <div v-if="!recipes.length && !pending" class="flex w-full items-start">
+        Sorry! No results found for your query. try&nbsp;
+        <NuxtLink to="/meal?q=bread" class="text-sky-700 underline">Bread</NuxtLink
+        >&nbsp;instead.
+      </div>
     </div>
     <div class="flex items-center justify-center w-full my-4">
       <Button>Load More</Button>
@@ -33,18 +39,39 @@
 definePageMeta({
   layout: "base",
 });
+const route = useRoute();
 const pending = ref(true);
 const pageStart = ref(0);
 const pageLimit = ref(20);
 const recipes = ref([]);
+
 onMounted(async () => {
-  await fetchRecipeList();
+  const { q = "" } = route.query;
+  try {
+    await fetchRecipeList(q);
+  } catch (error) {
+    pending.value = true;
+    recipes.value = [];
+    console.error(error);
+  }
 });
 
-const fetchRecipeList = async () => {
+watch(
+  route,
+  async (value) => {
+    if (value.query) {
+      const { q } = value.query;
+      await fetchRecipeList(q);
+    }
+  },
+  { deep: true, immediate: false }
+);
+
+const fetchRecipeList = async (q = "") => {
   pending.value = true;
+  recipes.value = [];
   const res = await $fetch(
-    `/api/recipes-mock?start=${pageStart.value}&limit=${pageLimit.value}`
+    `/api/recipes?start=${pageStart.value}&limit=${pageLimit.value}&q=${q}`
   );
   if (res && res?.results.length) {
     console.log("res", res);

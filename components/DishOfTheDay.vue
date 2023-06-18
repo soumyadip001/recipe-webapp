@@ -19,7 +19,9 @@
         eggplant is well-coated on all sides!
       </p>
       <div>
-        <Button size="sm">View Menu</Button>
+        <Button size="sm">
+          <NuxtLink to="/details/3973">View Menu</NuxtLink>
+        </Button>
       </div>
     </div>
   </Section>

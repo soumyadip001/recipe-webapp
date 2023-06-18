@@ -17,7 +17,9 @@
         slight twist.
       </p>
       <div>
-        <Button size="sm">View Menu</Button>
+        <Button size="sm">
+          <NuxtLink to="/details/901">View Menu</NuxtLink>
+        </Button>
       </div>
     </div>
     <div class="w-1/2 flex justify-start items-center py-12 h-[600px] overflow-hidden">

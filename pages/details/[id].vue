@@ -1,11 +1,5 @@
 <template>
-  <div v-if="pending" class="absolute w-screen flex justify-center h-screen items-center">
-    <div
-      class="w-[500px] h-auto flex justify-center items-center bg-gray-700/25 rounded-2xl overflow-hidden"
-    >
-      <img src="~/assets/loader.gif" alt="Page is loading..." />
-    </div>
-  </div>
+  <Loader :pending="pending" />
   <Section margin-y="4" :is-col="true" flex-items="items-start" gap="4" v-if="recipe">
     <h2 class="font-n text-4xl">{{ recipe.name }}</h2>
     <div class="flex w-full items-start justify-between">
@@ -148,7 +142,7 @@ const extractRecipeId = () => {
 
 const fetchRecipeDetails = async (recipeId) => {
   pending.value = true;
-  const res = await $fetch(`/api/details/?id=${recipeId}&mock=true`);
+  const res = await $fetch(`/api/details/?id=${recipeId}`);
   let count = 0;
   if (res) {
     console.log("res", res);

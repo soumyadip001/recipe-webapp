@@ -12,14 +12,6 @@
           >Dish Types</NuxtLink
         >
       </li>
-      <li>
-        <NuxtLink to="/cuisines" class="text-gray-800 hover:text-black"
-          >Cuisines</NuxtLink
-        >
-      </li>
-      <li>
-        <NuxtLink to="/contact" class="text-gray-800 hover:text-black">Contact</NuxtLink>
-      </li>
     </ul>
   </nav>
 </template>

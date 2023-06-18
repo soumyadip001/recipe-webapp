@@ -3,6 +3,7 @@
     :class="`flex rounded-full overflow-hidden items-center justify-center transition-all relative ${
       props.size === 'sm' ? 'w-80p h-80p' : 'w-full h-full'
     } cursor-pointer`"
+    @click="navigateToDetails"
   >
     <img :src="props.imgUrl" :alt="props.imgAlt" class="h-full w-full" />
 
@@ -30,6 +31,11 @@ const props = defineProps({
     default: "Cuisine Card",
   },
 });
+
+const router = useRouter();
+const navigateToDetails = () => {
+  router.push("/meal?q=" + props.imgAlt);
+};
 </script>
 
 <style lang="scss" scoped></style>

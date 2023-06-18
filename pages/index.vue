@@ -8,8 +8,10 @@
         Want to learn to cook but confused how to start? <br />No need to worry again!
       </p>
       <div class="flex w-full gap-4">
-        <Button>Get Started</Button>
-        <ButtonOutline>Explore Menu</ButtonOutline>
+        <Button>
+          <NuxtLink to="/meal">Get Started</NuxtLink>
+        </Button>
+        <ButtonOutline><NuxtLink to="/dishes">Explore Menu</NuxtLink></ButtonOutline>
       </div>
     </div>
     <div class="w-full flex justify-end items-center">
@@ -30,7 +32,7 @@
     <div class="flex w-full gap-8">
       <div class="w-1/3">
         <RecipeCard
-          :id="4704"
+          :id="1007"
           img-url="https://unsplash.com/photos/yhc4pSbl01A/download?ixid=M3wxMjA3fDB8MXxhbGx8fHx8fHx8fHwxNjg2NzIwNjU1fA&force=true&w=640"
           img-alt="Avocado Salad"
           title="Avocado Salad"
@@ -38,7 +40,7 @@
       </div>
       <div class="w-1/3">
         <RecipeCard
-          :id="4705"
+          :id="5462"
           img-url="https://unsplash.com/photos/IA1J0X-KX3Q/download?force=true&w=640"
           img-alt="Philipino Noodles"
           title="Philipino Noodles"
@@ -46,7 +48,7 @@
       </div>
       <div class="w-1/3">
         <RecipeCard
-          :id="4706"
+          :id="7516"
           img-url="https://unsplash.com/photos/xX9SmqQCbFY/download?ixid=M3wxMjA3fDB8MXxzZWFyY2h8MjZ8fGZvb2QlMjBkaXNofGVufDB8fHx8MTY4NjY2Njc2MXww&force=true&w=640"
           img-alt="Strawberry Salad with Balsamic"
           title="Strawberry Salad with Balsamic"
