@@ -24,50 +24,43 @@
 <script setup>
 const cuisinList = ref([
   {
-    img:
-      "https://unsplash.com/photos/iy_MT2ifklc/download?ixid=M3wxMjA3fDB8MXxzZWFyY2h8MTF8fHNodXNoaSUyMGZvb2R8ZW58MHx8fHwxNjg2NzI0Mjg0fDA&force=true&w=640",
+    img: "/images/shushi.jpg",
     alt: "Shushi",
     id: 1,
     country: "Japan",
   },
   {
-    img:
-      "https://www.holidify.com/images/cmsuploads/compressed/8896564-16x9-large_20181227133052.jpg",
+    img: "/images/Rendang.jpg",
     alt: "Rendang",
     id: 22,
     country: "Indonesia",
   },
   {
-    img:
-      "https://img.buzzfeed.com/video-api-prod/assets/9fcbbf1c8b974116bbca85dfccb7e066/BMP5726_Easy_Chicken_Miso_Ramen_Thumb.jpg?resize=600:*&output-format=auto&output-quality=auto",
+    img: "/images/Ramen.webp",
     alt: "Ramen",
     id: 2,
     country: "Japan",
   },
   {
-    img:
-      "https://img.buzzfeed.com/thumbnailer-prod-us-east-1/acc9dff831734eb588b971e7d4abe737/ImmunityBoostingFoodFBFinal.jpg?resize=600:*&output-format=auto&output-quality=auto",
+    img: "/images/TomYam.webp",
     alt: "Tom Yam",
     id: 3,
     country: "Thailand",
   },
   {
-    img:
-      "https://www.holidify.com/images/cmsuploads/compressed/bacon-kebabs-13-2_20181227133457.jpg",
+    img: "/images/Kebab.jpg",
     alt: "Kebab",
     id: 4,
     country: "Turkey",
   },
   {
-    img:
-      "https://www.holidify.com/images/cmsuploads/compressed/wmkj5fafebzkxpwhuzg6_20181227133752.jpeg",
+    img: "/images/Pho.jpeg",
     alt: "Pho",
     id: 5,
     country: "Vietnam",
   },
   {
-    img:
-      "https://www.holidify.com/images/cmsuploads/compressed/peking-duck-10916-1_20181227133910.jpg",
+    img: "/images/Pekingduck.jpg",
     alt: "Peking duck",
     id: 6,
     country: "China",
@@ -80,8 +73,7 @@ const cuisinList = ref([
     country: "Spain",
   },
   {
-    img:
-      "https://img.buzzfeed.com/thumbnailer-prod-us-east-1/58f5ac42d8424b009038f2ba425341d7/BFV34496Tasty-Facebook-1080x1080Final1.jpg?resize=600:*&output-format=auto&output-quality=auto",
+    img: "/images/Steak.jpg",
     alt: "Steak",
     id: 8,
     country: "England",
