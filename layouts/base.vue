@@ -1,6 +1,6 @@
 <template>
   <div class="flex w-full bg-white flex-col min-w-screen color-bg-white">
-    <header class="flex w-full h-24 justify-between px-24 py-8">
+    <header class="flex w-full h-24 justify-between px-12 lg:px-24 sm:px-16 py-8">
       <Logo />
       <Nav />
       <SearchBar />

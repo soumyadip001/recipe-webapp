@@ -1,8 +1,10 @@
 <template>
   <section
-    :class="`flex justify-between ${props.flexItems} bg-${props.bg} w-full px-24 gap-${
-      props.gap
-    } my-${props.marginY} ${props.isCol ? 'flex-col' : null}`"
+    :class="`flex justify-between ${props.flexItems} bg-${
+      props.bg
+    } w-full px-12 lg:px-24 sm:px-16 gap-${props.gap} md:gap-4 sm:gap-3 my-${
+      props.marginY
+    } ${props.isCol ? 'flex-col' : null}`"
   >
     <slot></slot>
   </section>

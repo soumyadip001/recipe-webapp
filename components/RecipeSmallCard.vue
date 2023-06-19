@@ -1,6 +1,6 @@
 <template>
   <div
-    :class="`absolute flex px-6 py-2 flex-col justify-center w-56 h-48 bg-white b-${props.bottom}-px l-${props.left}-px shadow-lg rounded-xl overflow-hidden gap-4 hover:shadow-xl cursor-pointer`"
+    :class="`absolute flex px-6 py-2 flex-col justify-center w-56 h-48 bg-white xl:b-${props.bottom}-px xl:l-${props.left}-px shadow-lg rounded-xl overflow-hidden gap-4 hover:shadow-xl cursor-pointer 2xl:bottom-8 2xl:left-8 sm:bottom-4 sm:left-4`"
     @click="openDetails"
   >
     <div class="flex w-full h-auto gap-4">

@@ -11,8 +11,12 @@
         />
         Vegetarion Recipe</span
       >
-      <h2 class="font-n text-5xl w-8/12 leading-15">Eggplant Parmesan Recipe</h2>
-      <p class="text-base w-9/12">
+      <h2
+        class="font-n text-3xl md:text-4xl lg:text-5xl w-full md:w-8/12 md:leading-10 lg:leading-15"
+      >
+        Eggplant Parmesan Recipe
+      </h2>
+      <p class="text-base w-full md:w-9/12">
         Bread the eggplant. Mix together the herb, Parmesan, and panko coating in one
         shallow bowl, and whisk 2 eggs with a dash of almond milk in another. Dip each
         eggplant slice into the egg mixture before tossing it in the panko. Make sure the

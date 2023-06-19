@@ -4,17 +4,19 @@
       <Icon name="iconamoon:search-thin" size="20" />
       <input
         type="text"
-        class="bg-transparent outline-0 border-0 grow-1 pl-4"
+        class="bg-transparent outline-0 border-0 grow-1 pl-4 md:pl-2"
         placeholder="Search"
         v-model="searchText"
         @keyup.enter="onPressEnter"
       />
-      <Icon
-        name="solar:close-circle-bold"
-        size="25"
-        v-if="searchText"
-        @click="clearInput"
-      />
+      <div class="flex justify-start items-center md:hidden lg:flex">
+        <Icon
+          name="solar:close-circle-bold"
+          size="20"
+          v-if="searchText"
+          @click="clearInput"
+        />
+      </div>
     </div>
   </div>
 </template>

@@ -8,7 +8,11 @@
         />
         Non Vegetarion Recipe</span
       >
-      <h2 class="font-n text-5xl w-8/12 leading-15">Garlic Noodles with Shrimp</h2>
+      <h2
+        class="font-n text-3xl md:text-4xl lg:text-5xl w-full md:w-8/12 md:leading-10 lg:leading-15"
+      >
+        Garlic Noodles with Shrimp
+      </h2>
       <p class="text-base w-9/12">
         Garlic Noodles with Shrimp is not an authentic Asian recipe. It calls for Asian
         ingredients, along with western ingredients such as butter and spaghetti noodles.
