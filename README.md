@@ -1,63 +1,38 @@
-# Nuxt 3 Minimal Starter
+[![Github](https://img.shields.io/twitter/url?color=green&label=Github&logo=github&logoColor=white&style=for-the-badge&url=https%3A%2F%2Fmiraculous-app.netlify.app%2F)](https://github.com/soumyadip001)
+[![Email](https://img.shields.io/twitter/url?color=green&label=Email&logo=gmail&logoColor=red&style=for-the-badge&url=https%3A%2F%2Fmiraculous-app.netlify.app%2F)](mailto:soumyadiphazra@gmail.com)
 
-Look at the [Nuxt 3 documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
+<h1 align="center">FoodNood 🎵</h1>
+<h2 align="center">A recipe app where you can explore 1000+ recipes worldwide</h2>
 
-## Setup
+## APP Stack Details
 
-Make sure to install the dependencies:
+[![Vue 3](https://img.shields.io/badge/Vue-3-61DAFB?logo=Vue.js&color=orange)](https://vuejs.org/)
+[![nuxt-icon](https://img.shields.io/badge/NuxtIcon-latest-brightgreen)](https://nuxt.com/modules/icon)
+[![Nuxt.JS 3](https://img.shields.io/badge/Nuxt-3-yellowgreen?logo=Nuxt.js)](https://nuxt.com/)
+[![SASS](https://img.shields.io/badge/Sass-1.49-red?logo=Sass)](https://vuejs.org/)
+[![Tailwind](https://img.shields.io/badge/tailwindcss-3.0-red?logo=tailwindcss)](https://tailwindcss.com/)
 
-```bash
-# npm
-npm install
+## Preview
+See the demo here: [preview](https://sdh-foodmood.netlify.app/)
 
-# pnpm
-pnpm install
+**NOTE:** Please note that this site is deployed to Netlify as a **static website**. Changes regarding the `/server` folder will not work. So all the API(s) will fail as expected. Please run this site locally in order to see the full functionality as search/pagination/recipe-details etc. But first, you need to create an API from [rapidapi](https://rapidapi.com/apidojo/api/tasty) and add the following env variables `SP_RapidAPI_Key` and `SP_RapidAPI_Host`. CHEERS!!!!
 
-# yarn
-yarn install
-```
+## Credits
+This app design is heavily inspired by [dribble](https://dribbble.com/shots/15223754-Food-Cooking-Inspiration-Website) but the layout is recreated completely using `Vue`, `tailwind` and `flexbox`. This app is created solely for **educational purposes** and **strictly not for sale!**. The Images used in this project are taken from [unsplash](https://unsplash.com/s/photos/food-dish) & the credit goes to them. Cheers!
 
-## Development Server
+## Features
 
-Start the development server on `http://localhost:3000`:
+- Created with VUE 3
+- On top of Nuxt JS (Server Side rendering enabled)
+- Flexbox design
+- Used Tailwind 3 with purge
+- Component-based and fully customizable
+- Free to use and modify
 
-```bash
-# npm
-npm run dev
+## Demo
 
-# pnpm
-pnpm run dev
+[Preview at here](https://sdh-foodmood.netlify.app/)
 
-# yarn
-yarn dev
-```
+Full App Preview
 
-## Production
-
-Build the application for production:
-
-```bash
-# npm
-npm run build
-
-# pnpm
-pnpm run build
-
-# yarn
-yarn build
-```
-
-Locally preview production build:
-
-```bash
-# npm
-npm run preview
-
-# pnpm
-pnpm run preview
-
-# yarn
-yarn preview
-```
-
-Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
+![Full App Preview](https://raw.githubusercontent.com/soumyadip001/recipe-webapp/master/public/images/fullpage.png)
