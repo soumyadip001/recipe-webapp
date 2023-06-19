@@ -15,7 +15,7 @@
     </div>
 
     <div
-      class="absolute text-2xl h-full w-full flex justify-center items-center text-white bg-gray-900 opacity-0 hover:opacity-80 transition-all font-n"
+      class="absolute text-2xl h-full w-full flex justify-center items-center text-white bg-gray-900 opacity-0 hover:opacity-80 transition-all font-n text-center"
     >
       {{ props.imgAlt }}
     </div>

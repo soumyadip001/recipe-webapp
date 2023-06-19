@@ -1,7 +1,7 @@
 <template>
   <div
-    class="w-full flex items-center justify-start h-[450px] gap-8"
-    v-if="props.renditions"
+    class="w-full flex items-center justify-start h-[450px] gap-4 lg:gap-8"
+    v-if="props.renditions.length"
   >
     <div class="grow flex justify-center items-center h-full">
       <video
@@ -17,7 +17,7 @@
       </video>
     </div>
     <div
-      class="flex w-[500px] h-full overflow-scroll flex-col items-start justify-center gap-4 bg-gray-900 px-4 py-2 pt-280px text-white"
+      class="hidden md:flex w-[500px] h-full overflow-scroll flex-col items-start justify-center gap-4 bg-gray-900 px-4 py-2 pt-280px text-white lg:pt-10"
     >
       <div
         v-for="vid in props.renditions"
@@ -81,6 +81,11 @@ const updateCurrentVideo = (vid) => {
 
 <style lang="scss" scoped>
 .pt-280px {
-  padding-top: 280px;
+  padding-top: 200px;
+}
+@media only screen and (min-width: 0px) and (max-width: 1024px) {
+  .pt-280px {
+    padding-top: 100px;
+  }
 }
 </style>

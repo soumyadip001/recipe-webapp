@@ -1,6 +1,6 @@
 <template>
   <div
-    class="flex flex-col md:flex-row w-full px-12 lg:px-24 sm:px-16 gap-12 flex-wrap my-8 items-center"
+    class="flex flex-col md:flex-row w-full px-12 lg:px-24 sm:px-16 gap-12 flex-wrap my-8 items-center justify-center"
   >
     <div
       class="w-[250px] md:w-[200px] md:h-[200px] h-[250px] items-center flex"

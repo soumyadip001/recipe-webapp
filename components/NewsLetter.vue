@@ -1,7 +1,7 @@
 <template>
   <Section bg="white" flex-items="items-start" margin-y="0">
     <div
-      class="flex justify-center items-center px-2 md:px-8 flex-col mb-12 newsletter-bg h-[400px] w-full rounded-xl overflow-hidden text-white gap-8"
+      class="flex justify-center items-center px-4 md:px-8 flex-col mb-12 newsletter-bg h-[400px] w-full rounded-xl overflow-hidden text-white gap-8"
     >
       <h4 class="font-n text-4xl lg:text-5xl w-full md:w-8/12 lg:w-6/12 text-center">
         Subscribe to get weekly recipe updates

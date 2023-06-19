@@ -2,8 +2,12 @@
   <Loader :pending="pending" />
   <Section margin-y="4" :is-col="true" flex-items="items-start" gap="4" v-if="recipe">
     <h2 class="font-n text-4xl">{{ recipe.name }}</h2>
-    <div class="flex w-full items-start justify-between">
-      <div class="w-1/2 flex justify-center items-center h-[500px] pr-8 min-w-[400px]">
+    <div
+      class="flex flex-col md:flex-row w-full items-start justify-between gap-8 md:gap-0"
+    >
+      <div
+        class="w-full md:w-1/2 flex justify-center items-center h-[500px] pr-8 min-w-[400px]"
+      >
         <img
           :src="recipe.thumbnail_url"
           class="w-full h-full max-h-[500px] rounded-xl"
