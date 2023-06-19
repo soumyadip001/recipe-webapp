@@ -8,6 +8,13 @@
     <img :src="props.imgUrl" :alt="props.imgAlt" class="h-full w-full" />
 
     <div
+      class="absolute bottom-0 w-full h-16 flex justify-center items-center text-white text-center bg-gray-900/70 text-lg"
+      v-if="props.country"
+    >
+      {{ props.country }}
+    </div>
+
+    <div
       class="absolute text-2xl h-full w-full flex justify-center items-center text-white bg-gray-900 opacity-0 hover:opacity-80 transition-all font-n"
     >
       {{ props.imgAlt }}
@@ -29,6 +36,11 @@ const props = defineProps({
   imgAlt: {
     type: String,
     default: "Cuisine Card",
+  },
+  country: {
+    type: String,
+    required: false,
+    default: "",
   },
 });
 

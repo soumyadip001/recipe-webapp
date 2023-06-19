@@ -9,7 +9,7 @@
       </li>
       <li>
         <NuxtLink to="/dishes" class="text-gray-800 hover:text-black"
-          >Dish Types</NuxtLink
+          >World Dishes</NuxtLink
         >
       </li>
     </ul>

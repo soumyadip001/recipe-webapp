@@ -14,12 +14,13 @@
         <ButtonOutline><NuxtLink to="/dishes">Explore Menu</NuxtLink></ButtonOutline>
       </div>
     </div>
-    <div class="w-full flex justify-end items-center">
+    <div class="w-full flex justify-end items-center relative">
       <img
         src="https://unsplash.com/photos/MSxw2vpQzx4/download?ixid=M3wxMjA3fDB8MXxhbGx8fHx8fHx8fHwxNjg2Njc0MDA4fA&force=true&w=640"
         class="w-[650px] h-auto rounded-xl"
         alt="Food closeup"
       />
+      <RecipeSmallCard bottom="45" left="105" img-url="https://img.buzzfeed.com/thumbnailer-prod-us-east-1/video-api/assets/255761.jpg" img-alt="Keto Breakfast Sandwiches" title="Keto Sandwiches" rating="5.9" id="6027-keto-breakfast-sandwiches" />
     </div>
   </Section>
   <Section :is-col="true" flex-items="items-start" bg="white">

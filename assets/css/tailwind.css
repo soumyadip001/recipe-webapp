@@ -39,6 +39,8 @@
 .hover-w-90p:hover { width: 90%; }
 .hover-h-90p:hover { height: 90%; }
 .leading-15 { line-height: 4rem; }
+.b-45-px { bottom: 45px; }
+.l-105-px { left: 105px; }
 
 .p-elipsis {
   overflow: hidden;
