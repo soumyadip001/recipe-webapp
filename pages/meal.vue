@@ -6,7 +6,7 @@
       <NuxtLink class="btn-link" to="/">Back to home</NuxtLink>
     </div>
     <div class="flex w-full mb-12 min-h-[700px]">
-      <template v-if="pending">
+      <template v-if="pending && !recipes.length">
         <p>Please wait till we fetch all the recipe</p>
       </template>
       <div v-if="recipes.length" class="flex w-full items-center flex-wrap gap-8">
@@ -83,7 +83,7 @@ const fetchRecipeList = async (q = "", append = false) => {
 
     if (append) {
       const existingRecipe = recipes.value;
-      recipes.value = [...existingRecipe, res.results];
+      recipes.value = [...existingRecipe, ...res.results];
     } else {
       recipes.value = res.results;
     }
