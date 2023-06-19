@@ -30,7 +30,7 @@
       </div>
     </div>
     <div class="flex items-center justify-center w-full my-4">
-      <Button>Load More</Button>
+      <Button @button-clicked="updatepagination">Load More</Button>
     </div>
   </Section>
 </template>
@@ -67,19 +67,36 @@ watch(
   { deep: true, immediate: false }
 );
 
-const fetchRecipeList = async (q = "") => {
+const fetchRecipeList = async (q = "", append = false) => {
   pending.value = true;
-  recipes.value = [];
+  if (!append) {
+    recipes.value = [];
+  }
   const res = await $fetch(
-    `/api/recipes?start=${pageStart.value}&limit=${pageLimit.value}&q=${q}`
+    `/api/recipes?start=${pageStart.value * pageLimit.value}&limit=${
+      pageLimit.value
+    }&q=${q}`
   );
   if (res && res?.results.length) {
     console.log("res", res);
     pending.value = false;
-    recipes.value = res.results;
+
+    if (append) {
+      const existingRecipe = recipes.value;
+      recipes.value = [...existingRecipe, res.results];
+    } else {
+      recipes.value = res.results;
+    }
   } else {
     pending.value = false;
     recipes.value = [];
   }
+};
+
+const updatepagination = async () => {
+  const { q = "" } = route.query;
+  const existingVal = pageStart.value;
+  pageStart.value = existingVal + 1;
+  await fetchRecipeList(q, true);
 };
 </script>
